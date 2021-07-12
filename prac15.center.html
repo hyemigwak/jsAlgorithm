@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer;
+        let mid = Math.floor(s.length / 2);
+        //substr(2,4) -> 2번 인덱스부터 4개 뽑기라는 뜻
+        if (s.length % 2 === 1) answer = s.substr(mid, 1);
+        else answer = s.substr(mid - 1, 2);
+
+        return answer;
+      }
+
+      let s = "good";
+      console.log(solution(s));
+    </script>
+  </body>
+</html>

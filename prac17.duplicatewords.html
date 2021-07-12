@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer = [];
+        // filter는 새 배열을 반환, 콜백함수로 v,i 인자를 받는다 = 요소, 인덱스
+        // answer = s.filter(function (v, i) {
+        //   return s.indexOf(v) === i;
+        // });
+        answer = s.filter((v, i) => s.indexOf(v) === i);
+
+        return answer;
+      }
+      let arr = ["good", "time", "good", "time", "student"];
+      console.log(solution(arr));
+    </script>
+  </body>
+</html>

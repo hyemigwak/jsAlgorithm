@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(str) {
+        let answer = 0;
+        for (let x of str) {
+          let num = x.charCodeAt(); //x 라는 문자의 아스키 코드를 넘겨줌, 대문자는 65~90까지, 소문자는 97~122
+          if (num >= 64 && num <= 90) answer++;
+        }
+        return answer;
+      }
+      let str = "KoreaTimeGood";
+      console.log(solution(str));
+    </script>
+  </body>
+</html>
