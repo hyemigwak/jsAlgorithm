@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let answer = "";
+        //isNaN()는 어떤 값이 NaN인지 판별한다(숫자가 아닌지 판별) true/false로 반환
+        for (let x of s) {
+          if (!isNaN(x)) answer += x;
+        }
+        return parseInt(answer);
+      }
+      let str = "g0en2T0s8eSoft";
+      console.log(solution(str));
+    </script>
+  </body>
+</html>
