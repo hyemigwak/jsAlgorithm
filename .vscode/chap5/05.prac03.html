@@ -5,13 +5,24 @@
   </head>
   <body>
     <script>
-      function solution(arr) {
-        let answer;
-
+      //투포인터 알고리즘
+      function solution(m, array) {
+        let answer = 0;
+        let lt = 0,
+          sum = 0;
+        for (let rt = 0; rt < arr.length; rt++) {
+          sum += arr[rt];
+          if (sum === m) answer++;
+          while (sum >= m) {
+            //sum이 m보다 크거나 같으면 while문 반복, sum이 m보다 작아지면 멈춤
+            sum -= arr[lt++]; //sum에서 lt값을 빼주고, lt를 증가시킴
+            if (sum === m) answer++;
+          }
+        }
         return answer;
       }
-      let arr = [];
-      console.log(solution(arr));
+      let arr = [1, 2, 1, 3, 1, 1, 1, 2];
+      console.log(solution(6, arr));
     </script>
   </body>
 </html>
