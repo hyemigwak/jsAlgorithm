@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(nums) {
+        const arr = [];
+        for (let x of nums) {
+          if (!arr.includes(x) && arr.length < nums.length / 2) {
+            arr.push(x);
+          }
+        }
+        return arr.length;
+      }
+
+      let nums = [3, 3, 3, 2, 2, 2];
+      console.log(solution(nums));
+    </script>
+  </body>
+</html>

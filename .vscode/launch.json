@@ -7,8 +7,8 @@
     {
       "type": "chrome",
       "request": "launch",
-      "name": "Open 04_prac05.html",
-      "file": "c:\\sparta_react\\js_algorithm\\02_prac06.html"
+      "name": "Open 05_prac07.html",
+      "file": "c:\\sparta_react\\js_algorithm\\05_prac07.html"
     }
   ]
 }

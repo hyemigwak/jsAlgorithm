@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(dirs) {
+        const direction = {
+          U: [0, 1],
+          D: [0, -1],
+          L: [-1, 0],
+          R: [1, 0],
+        };
+        let visited = new Set();
+        let now = [0, 0];
+
+        for (let i = 0; i < dirs.length; i++) {
+          let dx = now[0] + direction[dirs[i]][0];
+          let dy = now[1] + direction[dirs[i]][1];
+
+          if (dx > 5 || dx < -5 || dy > 5 || dy < -5) continue;
+          visited.add("" + now[0] + now[1] + dx + dy);
+          visited.add("" + dx + dy + now[0] + now[1]);
+
+          now = [dx, dy];
+        }
+        console.log(visited);
+        return visited.size / 2;
+      }
+
+      let dirs = "ULURRDLLU";
+      console.log(solution(dirs));
+    </script>
+  </body>
+</html>

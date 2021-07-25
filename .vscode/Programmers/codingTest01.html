@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(n, m) {
+        let answer = 0;
+        for (let i = n; i <= m; i++) {
+          if (Number(String(i).split("").reverse().join("")) === i) answer++;
+        }
+
+        return answer;
+      }
+      console.log(solution(100, 300));
+    </script>
+  </body>
+</html>
